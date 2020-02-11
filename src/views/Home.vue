@@ -1,9 +1,13 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="Vue logo" src="../assets/logoh.png">
     <HelloWorld msg="Bienvenidos a Burger Queen Jenn"/>
     <div>{{$store.state.bebidasFrias}}</div>
+    <div>{{$store.state.bebidasCalientes}}</div>
     <div>{{$store.state.hamburguesas}}</div>
+    <div>{{$store.state.sandwich}}</div>
+    <div>{{$store.state.acompañamientos}}</div>
+    <div>{{$store.state.adicionales}}</div>
   </div>
 </template>
 
@@ -28,7 +32,11 @@ export default {
   mounted() {},
   created() {
     this.$store.dispatch('bindBebidasFrias');
+    this.$store.dispatch('bindBebidasCalientes');
     this.$store.dispatch('bindHamburguesas');
+    this.$store.dispatch('bindSandwich');
+    this.$store.dispatch('bindAcompañamientos');
+    this.$store.dispatch('bindAdicionales');
   },
 };
 </script>

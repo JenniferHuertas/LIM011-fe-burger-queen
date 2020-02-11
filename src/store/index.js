@@ -7,13 +7,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    todos: [],
+    bebidasFrias: [],
     hamburguesas: [],
   },
   mutations: vuexfireMutations,
   actions: {
-    bindTodos: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('todos', db.collection('Bebidas Calientes'))),
-    bindHamburguesas: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('todos', db.collection('Hamburguesas'))),
+    bindBebidasFrias: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('bebidasFrias', db.collection('Bebidas Frias'))),
+    bindHamburguesas: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('hamburguesas', db.collection('Hamburguesas'))),
   },
   modules: {},
 });

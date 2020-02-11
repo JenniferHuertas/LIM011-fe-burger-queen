@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logoh.png">
-    <HelloWorld msg="Bienvenidos a Burger Queen Jenn"/>
+    <HelloWorld msg="Bienvenidos a Señor Burger"/>
+    <button @click="agregarCliente">Agregar</button>
     <div>{{$store.state.bebidasFrias}}</div>
     <div>{{$store.state.bebidasCalientes}}</div>
     <div>{{$store.state.hamburguesas}}</div>
@@ -18,12 +19,20 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
   name: 'Home',
-  data() {},
+  data() {
+    return {
+    };
+  },
   components: {
     HelloWorld,
   },
   methods: {
-
+    agregarCliente() {
+      this.clientes.push({
+        cliente: this.nuevoCliente,
+      });
+      console.log(this.clientes);
+    },
   },
   computed: {
   },

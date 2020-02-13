@@ -2,7 +2,9 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logoh.png">
     <HelloWorld msg="Bienvenidos a Señor Burger"/>
+    <input type="text" v-model="nuevoCliente">
     <button @click="agregarCliente">Agregar</button>
+    <p>{{ clientes }}</p>
     <div>{{$store.state.bebidasFrias}}</div>
     <div>{{$store.state.bebidasCalientes}}</div>
     <div>{{$store.state.hamburguesas}}</div>
@@ -21,6 +23,9 @@ export default {
   name: 'Home',
   data() {
     return {
+      titulo: 'Agregar cliente',
+      clientes: [],
+      nuevoCliente: '',
     };
   },
   components: {
@@ -31,7 +36,6 @@ export default {
       this.clientes.push({
         cliente: this.nuevoCliente,
       });
-      console.log(this.clientes);
     },
   },
   computed: {

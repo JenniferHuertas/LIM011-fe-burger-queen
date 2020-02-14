@@ -2,9 +2,12 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logoh.png">
     <HelloWorld msg="Bienvenidos a Señor Burger"/>
-    <input type="text" v-model="nuevoCliente">
-    <button @click="agregarCliente">Agregar</button>
-    <p>{{ clientes }}</p>
+    <div class="alert alert-secondary" role="alert">
+      <input type="text" class="form-control my-3" v-model="nuevoCliente">
+      <button class="btn btn-primary" @click="agregarCliente">Agregar</button>
+      <p>{{ clientes }}</p>
+    </div>
+
     <div>{{$store.state.bebidasFrias}}</div>
     <div>{{$store.state.bebidasCalientes}}</div>
     <div>{{$store.state.hamburguesas}}</div>

@@ -1,45 +1,30 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logoh.png">
-    <HelloWorld msg="Bienvenidos a Señor Burger"/>
-    <div class="alert alert-secondary" role="alert">
-      <input type="text" class="form-control my-3" v-model="nuevoCliente">
-      <button class="btn btn-primary" @click="agregarCliente">Agregar</button>
-      <p>{{ clientes }}</p>
+    <HelloWorld msg="Bienvenidos a Señor Burger" mensaje="hola a todos"/>
+    <Customer/>
+    <Desayuno/>
+
+    <div v-for="bebidas in $store.state.bebidasCalientes" :key="bebidas.id">
+      <button>{{ bebidas.Nombre }}</button>
     </div>
 
-    <div>{{$store.state.bebidasFrias}}</div>
-    <div>{{$store.state.bebidasCalientes}}</div>
-    <div>{{$store.state.hamburguesas}}</div>
-    <div>{{$store.state.sandwich}}</div>
-    <div>{{$store.state.acompañamientos}}</div>
-    <div>{{$store.state.adicionales}}</div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
+import Customer from '@/components/Customer.vue';
+import Desayuno from '@/components/Desayuno.vue';
 // import db from '../db';
 
 export default {
   name: 'Home',
-  data() {
-    return {
-      titulo: 'Agregar cliente',
-      clientes: [],
-      nuevoCliente: '',
-    };
-  },
   components: {
     HelloWorld,
-  },
-  methods: {
-    agregarCliente() {
-      this.clientes.push({
-        cliente: this.nuevoCliente,
-      });
-    },
+    Customer,
+    Desayuno,
   },
   computed: {
   },

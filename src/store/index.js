@@ -13,9 +13,6 @@ export default new Vuex.Store({
     sandwich: [],
     acompañamientos: [],
     adicionales: [],
-    titulo: 'Agregar Cliente',
-    clientes: [],
-    nuevoCliente: '',
 
   },
   mutations: vuexfireMutations,

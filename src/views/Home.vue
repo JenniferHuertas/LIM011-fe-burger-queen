@@ -1,13 +1,9 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logoh.png">
-    <HelloWorld msg="Bienvenidos a Señor Burger" mensaje="hola a todos"/>
+    <HelloWorld/>
+    <Menu/>
     <Customer/>
-    <Desayuno/>
-
-    <div v-for="bebidas in $store.state.bebidasCalientes" :key="bebidas.id">
-      <button>{{ bebidas.Nombre }}</button>
-    </div>
 
   </div>
 </template>
@@ -16,7 +12,7 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
 import Customer from '@/components/Customer.vue';
-import Desayuno from '@/components/Desayuno.vue';
+import Menu from '@/components/Menu.vue';
 // import db from '../db';
 
 export default {
@@ -24,7 +20,7 @@ export default {
   components: {
     HelloWorld,
     Customer,
-    Desayuno,
+    Menu,
   },
   computed: {
   },

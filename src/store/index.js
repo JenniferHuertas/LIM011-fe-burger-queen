@@ -14,6 +14,7 @@ export default new Vuex.Store({
     acompañamientos: [],
     adicionales: [],
 
+
   },
   mutations: vuexfireMutations,
   actions: {

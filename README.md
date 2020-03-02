@@ -121,46 +121,19 @@ pendientes de tu proyecto anterior.
 - [ ] Que es [Workbox](https://developers.google.com/web/tools/workbox)
 - [ ] Qué es un `serviceWorker`
 
-### Angular
-
-- [ ] [Uso de Components | Templates](https://angular.io/guide/architecture-components#introduction-to-components)
-- [ ] [Directivas estructurales (ngIf / ngFor)](https://angular.io/guide/template-syntax#built-in-structural-directives)
-- [ ] [@Input | @Ouput](https://angular.io/guide/component-interaction#component-interaction)
-- [ ] [Creación y uso de servicios](https://angular.io/guide/architecture-services#providing-services)
-- [ ] [Manejos de rutas](https://angular.io/guide/router)
-- [ ] [Uso de Observables](https://angular.io/guide/observables-in-angular)
-- [ ] [Uso de HttpClient](https://angular.io/guide/http)
-- [ ] [Estilos de componentes (ngStyle / ngClass)](https://angular.io/guide/template-syntax#built-in-directives)
-
-
-### React
-
-- [ ] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
-- [ ] [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
-- [ ] `props`
-- [ ] [Manejo de eventos](https://es.reactjs.org/docs/handling-events.html)
-- [ ] [Listas y keys](https://es.reactjs.org/docs/lists-and-keys.html)
-- [ ] [Renderizado condicional](https://es.reactjs.org/docs/conditional-rendering.html)
-- [ ] [Levantamiento de estados](https://es.reactjs.org/docs/lifting-state-up.html)
-- [ ] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
-- [ ] [`CSS` modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
-- [ ] [React Router](https://reacttraining.com/react-router/web)
-
-
-
 ### Vue
 
-- [Instancia de Vue.js](https://es.vuejs.org/v2/guide/instance.html)
-- [Datos y métodos](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
-- [Uso y creación de Componentes](https://vuejs.org/v2/guide/components.html)
-- [Props](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
-- Directivas ([v-bind](https://es.vuejs.org/v2/api/#v-bind) | [v-model](https://es.vuejs.org/v2/guide/forms.html))
-- Renderizado condicional ([v-if](https://es.vuejs.org/v2/guide/conditional.html#v-if) | [v-else](https://es.vuejs.org/v2/guide/conditional.html#v-else))
-- Iteraciones ([v-for](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for))
-- Eventos ([v-on](https://es.vuejs.org/v2/guide/events.html))
-- [Propiedades Computadas y Observadores](https://es.vuejs.org/v2/guide/computed.html)
-- [Router](https://router.vuejs.org/guide/#html)
-- [Clases y Estilos](https://es.vuejs.org/v2/guide/class-and-style.html)
+- [ ] [Instancia de Vue.js](https://es.vuejs.org/v2/guide/instance.html)
+- [ ] [Datos y métodos](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
+- [ ] [Uso y creación de Componentes](https://vuejs.org/v2/guide/components.html)
+- [ ] [Props](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
+- [ ] Directivas ([v-bind](https://es.vuejs.org/v2/api/#v-bind) | [v-model](https://es.vuejs.org/v2/guide/forms.html))
+- [ ] Renderizado condicional ([v-if](https://es.vuejs.org/v2/guide/conditional.html#v-if) | [v-else](https://es.vuejs.org/v2/guide/conditional.html#v-else))
+- [ ] Iteraciones ([v-for](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for))
+- [ ] Eventos ([v-on](https://es.vuejs.org/v2/guide/events.html))
+- [ ] [Propiedades Computadas y Observadores](https://es.vuejs.org/v2/guide/computed.html)
+- [ ] [Router](https://router.vuejs.org/guide/#html)
+- [ ] [Clases y Estilos](https://es.vuejs.org/v2/guide/class-and-style.html)
 
 
 ### Firebase

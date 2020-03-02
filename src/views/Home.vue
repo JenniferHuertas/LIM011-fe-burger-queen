@@ -1,16 +1,23 @@
 <template>
-  <div class="home">
+  <div>
     <img alt="Vue logo" src="../assets/logoh.png" class="img-fluid">
-    <HelloWorld/>
-    <Menu/>
-    <Customer/>
-
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <Menu/>
+        </div>
+        <div class="col">
+          <Customer/>
+          <Pedidos/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import Pedidos from '@/components/Pedidos.vue';
 import Customer from '@/components/Customer.vue';
 import Menu from '@/components/Menu.vue';
 // import db from '../db';
@@ -18,7 +25,7 @@ import Menu from '@/components/Menu.vue';
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    Pedidos,
     Customer,
     Menu,
   },

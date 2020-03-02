@@ -1,7 +1,5 @@
 <template>
-    <div class="container px-lg-5">
-      <div class="row row-cols-2">
-        <div class="col py-3 px-lg-5 border bg-light">
+    <div class="container mt-5">
           <nav class="navbar navbar-light bg-light">
             <form id="dynamic-component-demo" class="form-inline">
                 <button @click="showMenu('des')" class="btn btn-outline-success"
@@ -14,11 +12,10 @@
                 type="button">Adicionales</button>
             </form>
           </nav>
-        </div>
+
       <Desayuno v-if="menuTypes.des"/>
       <Almuerzo v-if="menuTypes.al"/>
       <Adicionales v-if="menuTypes.adi"/>
-      </div>
     </div>
 </template>
 

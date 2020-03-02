@@ -1,6 +1,6 @@
 <template>
-    <div>
-      <div class="d-flex align-content-start flex-wrap">
+    <div class="container mt-5">
+      <div class="d-flex justify-content-start align-items-center">
         <div v-for="(el,index) in $store.state.adicionales" :key="index.toString().concat('ad')">
           <button v-if="el.Categoria == 'Adicionales'" @click="lista = showElements(lista, el)"
           class="btn btn-success">{{ el.Nombre }} S/.{{ el.Precio }}</button>

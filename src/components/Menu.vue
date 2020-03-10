@@ -2,53 +2,66 @@
     <div class="container mt-5">
           <nav class="navbar navbar-light bg-light">
             <form id="dynamic-component-demo" class="form-inline">
-                <button @click="showMenu('des')" class="btn btn-outline-success"
-                type="button">Desayuno</button>
-                <button @click="showMenu('al')"
-                class="btn btn-outline-secondary"
-                type="button">Almuerzo y Cena</button>
-                <button @click="showMenu('adi')"
-                class="btn btn-outline-warning"
+                <button v-on:click="elementos = hamburguesas" class="btn btn-outline-success"
+                type="button">Hamburguesas</button>
+
+                <button v-on:click="elementos = sandwich" class="btn btn-outline-secondary"
+                type="button">Sandwich</button>
+
+                <button v-on:click="elementos = bebidasFrias" class="btn btn-outline-warning"
+                type="button">Bebidas Frias</button>
+
+                <button v-on:click="elementos = bebidasCalientes" class="btn btn-outline-primary"
+                type="button">Bebidas Calientes</button>
+
+                <button v-on:click="elementos = acompañamientos" class="btn btn-outline-danger"
+                type="button">Acompañamientos</button>
+
+                <button v-on:click="elementos = adicionales" class="btn btn-outline-dark"
                 type="button">Adicionales</button>
             </form>
           </nav>
 
-      <Desayuno v-if="menuTypes.des"/>
-      <Almuerzo v-if="menuTypes.al"/>
-      <Adicionales v-if="menuTypes.adi"/>
+          <div>
+            <ul v-for="elemento in elementos" :key="elemento.id"  class="list-group">
+              <li class="list-group-item" @click="showElements"
+              >{{ elemento.Nombre }} - S/.{{elemento.Precio}}</li>
+            </ul>
+          </div>
+
     </div>
 </template>
 
 <script>
 
-import Desayuno from './Desayuno.vue';
-import Almuerzo from './Almuerzo.vue';
-import Adicionales from './Adicionales.vue';
+import { mapGetters, mapState } from 'vuex';
+import showElements from '../funciones';
 
 export default {
   name: 'Menu',
   data() {
     return {
-      menuTypes: {
-        des: false,
-        al: false,
-        adi: false,
-      },
-
-
+      elementos: [],
     };
   },
+  computed: {
+    ...mapGetters([
+      'mostrarCategoria',
+    ]),
+    ...mapState([
+      'hamburguesas',
+      'sandwich',
+      'bebidasFrias',
+      'bebidasCalientes',
+      'acompañamientos',
+      'adicionales',
+    ]),
+  },
   methods: {
-    showMenu(menuType) {
-      Object.keys(this.menuTypes).forEach((el) => {
-        this.menuTypes[el] = el === menuType;
-      });
-    },
+    showElements,
   },
   components: {
-    Desayuno,
-    Almuerzo,
-    Adicionales,
+
   },
 };
 </script>

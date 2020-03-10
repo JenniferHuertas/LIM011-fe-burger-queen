@@ -2,7 +2,7 @@
   <div>
 
     <div>
-        <ul v-for="(lista) in lista" :key="lista.id" class="list-group">
+        <ul class="list-group">
           <li class="list-group-item">{{ lista.Nombre }} S/.{{lista.Precio}}<button
           class="btn btn-danger btn-sm" @click="eliminar(index)">X</button></li>
         </ul>
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
 import showElements from '../funciones';
 
 export default {

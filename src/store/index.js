@@ -7,15 +7,12 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    lista: [],
     bebidasFrias: [],
     bebidasCalientes: [],
     hamburguesas: [],
     sandwich: [],
     acompañamientos: [],
     adicionales: [],
-
-
   },
   mutations: vuexfireMutations,
   actions: {
@@ -26,5 +23,4 @@ export default new Vuex.Store({
     bindAcompañamientos: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('acompañamientos', db.collection('Acompañamientos'))),
     bindAdicionales: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('adicionales', db.collection('Adicionales'))),
   },
-  modules: {},
 });

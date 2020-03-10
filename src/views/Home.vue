@@ -1,7 +1,7 @@
 <template>
   <div>
     <img alt="Vue logo" src="../assets/logoh.png" class="img-fluid">
-    <div class="container">
+    <div class="container mt-5">
       <div class="row">
         <div class="col">
           <Menu/>
@@ -33,7 +33,6 @@ export default {
   },
   watch: {
   },
-  mounted() {},
   created() {
     this.$store.dispatch('bindBebidasFrias');
     this.$store.dispatch('bindBebidasCalientes');

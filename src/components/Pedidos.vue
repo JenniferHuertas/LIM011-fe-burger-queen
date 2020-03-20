@@ -2,11 +2,13 @@
   <div>
 
     <div>
-        <ul class="list-group">
-          <li class="list-group-item">{{ lista.Nombre }} S/.{{lista.Precio}}<button
-          class="btn btn-danger btn-sm" @click="eliminar(index)">X</button></li>
-        </ul>
-        <span>{{ total }}</span>
+        <ul v-for="(tomarPedido, index) in elementos" :key="index.id"  class="list-group">
+              <li class="list-group-item"
+              >{{ tomarPedido }} - S/.{{ tomarPedido }}</li>
+            </ul>
+
+
+        <span>{{  }}</span>
     </div>
 
   </div>
@@ -14,26 +16,35 @@
 
 <script>
 
-import showElements from '../funciones';
+import {
+  mapMutations, mapActions, mapGetters,
+} from 'vuex';
 
 export default {
   name: 'Pedidos',
   data() {
     return {
-      lista: [],
+      elementos: [],
     };
   },
   methods: {
-    showElements,
-    eliminar(index) {
-      this.lista.splice(index, 1);
-    },
+    // eliminar(index) {
+    //   this.lista.splice(index, 1);
+    // },
+    ...mapMutations([
+
+    ]),
+    ...mapActions([
+      'tomarPedido',
+    ]),
   },
   computed: {
-    total() {
-      return this.lista.reduce((a, b) => a + b.Precio, 0);
-    },
-
+    ...mapGetters([
+      'llenarProductos',
+    ]),
+    // total() {
+    //   return this.lista.reduce((a, b) => a + b.Precio, 0);
+    // },
   },
 };
 

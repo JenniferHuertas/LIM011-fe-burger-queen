@@ -2,29 +2,42 @@
     <div class="container mt-5">
           <nav class="navbar navbar-light bg-light">
             <form id="dynamic-component-demo" class="form-inline">
-                <button v-on:click="elementos = hamburguesas" class="btn btn-outline-success"
+                <button
+                v-on:click="elementos = llenarProductos('Categoria', 'hb')"
+                class="btn btn-outline-success"
                 type="button">Hamburguesas</button>
 
-                <button v-on:click="elementos = sandwich" class="btn btn-outline-secondary"
+                <button
+                v-on:click="elementos = llenarProductos('Categoria', 'sw')"
+                class="btn btn-outline-primary"
                 type="button">Sandwich</button>
 
-                <button v-on:click="elementos = bebidasFrias" class="btn btn-outline-warning"
+                <button
+                v-on:click="elementos = llenarProductos('Categoria', 'bf')"
+                class="btn btn-outline-secondary"
                 type="button">Bebidas Frias</button>
 
-                <button v-on:click="elementos = bebidasCalientes" class="btn btn-outline-primary"
+                <button
+                v-on:click="elementos = llenarProductos('Categoria', 'bc')"
+                class="btn btn-outline-danger"
                 type="button">Bebidas Calientes</button>
 
-                <button v-on:click="elementos = acompañamientos" class="btn btn-outline-danger"
+                <button
+                v-on:click="elementos = llenarProductos('Categoria', 'ac')"
+                class="btn btn-outline-warning"
                 type="button">Acompañamientos</button>
 
-                <button v-on:click="elementos = adicionales" class="btn btn-outline-dark"
+                <button
+                v-on:click="elementos = llenarProductos('Categoria', 'ad')"
+                class="btn btn-outline-dark"
                 type="button">Adicionales</button>
+
             </form>
           </nav>
 
           <div>
-            <ul v-for="elemento in elementos" :key="elemento.id"  class="list-group">
-              <li class="list-group-item" @click="showElements"
+            <ul v-for="(elemento, index) in elementos" :key="index.id"  class="list-group">
+              <li class="list-group-item" v-on:click="tomarPedido"
               >{{ elemento.Nombre }} - S/.{{elemento.Precio}}</li>
             </ul>
           </div>
@@ -34,8 +47,9 @@
 
 <script>
 
-import { mapGetters, mapState } from 'vuex';
-import showElements from '../funciones';
+import {
+  mapGetters, mapActions,
+} from 'vuex';
 
 export default {
   name: 'Menu',
@@ -46,19 +60,13 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'mostrarCategoria',
-    ]),
-    ...mapState([
-      'hamburguesas',
-      'sandwich',
-      'bebidasFrias',
-      'bebidasCalientes',
-      'acompañamientos',
-      'adicionales',
+      'llenarProductos',
     ]),
   },
   methods: {
-    showElements,
+    ...mapActions([
+      'tomarPedido',
+    ]),
   },
   components: {
 

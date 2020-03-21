@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import { vuexfireMutations, firestoreAction } from 'vuexfire';
 import db from '../db';
 
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -13,9 +14,7 @@ export default new Vuex.Store({
     sandwich: [],
     acompañamientos: [],
     adicionales: [],
-    listaProductos: {
-      items: [],
-    },
+    listaProductos: [],
   },
   getters: {
     llenarProductos: (state) => (propiedad, value) => {
@@ -36,8 +35,9 @@ export default new Vuex.Store({
   },
   mutations: {
     ...vuexfireMutations,
-    mostrarPedido(state, { valor }) {
-      state.listaProductos.items.push(valor);
+    showElements({ listaProductos }, { miArgumento }) {
+      console.log(listaProductos, miArgumento);
+      listaProductos.push(miArgumento);
     },
   },
   actions: {
@@ -48,14 +48,12 @@ export default new Vuex.Store({
     bindAcompañamientos: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('acompañamientos', db.collection('Acompañamientos'))),
     bindAdicionales: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('adicionales', db.collection('Adicionales'))),
     tomarPedido(context, el) {
-      const orden = {
+      const pedido = {
         Nombre: el.Nombre,
         Precio: el.Precio,
       };
-      const payload = { valor: orden };
-
-      context.commit('mostrarPedido', payload);
-      console.log(context);
+      const payload = { miArgumento: pedido };
+      context.commit('showElements', payload);
     },
   },
 });

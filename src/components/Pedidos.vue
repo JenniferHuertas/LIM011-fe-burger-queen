@@ -2,12 +2,10 @@
   <div>
 
     <div>
-        <ul v-for="(tomarPedido, index) in elementos" :key="index.id"  class="list-group">
-              <li class="list-group-item"
-              >{{ tomarPedido }} - S/.{{ tomarPedido }}</li>
+        <ul v-for="(elemento, index) in $store.state.listaProductos"
+        :key="index.id"  class="list-group">
+              <li class="list-group-item">{{ elemento.Nombre }} - S/.{{elemento.Precio}}</li>
             </ul>
-
-
         <span>{{  }}</span>
     </div>
 
@@ -17,14 +15,14 @@
 <script>
 
 import {
-  mapMutations, mapActions, mapGetters,
+  mapMutations, mapActions, mapGetters, mapState,
 } from 'vuex';
 
 export default {
   name: 'Pedidos',
   data() {
     return {
-      elementos: [],
+
     };
   },
   methods: {
@@ -32,7 +30,7 @@ export default {
     //   this.lista.splice(index, 1);
     // },
     ...mapMutations([
-
+      'showElements',
     ]),
     ...mapActions([
       'tomarPedido',
@@ -41,6 +39,15 @@ export default {
   computed: {
     ...mapGetters([
       'llenarProductos',
+    ]),
+    ...mapState([
+      'bebidasFrias',
+      'bebidasCalientes',
+      'hamburguesas',
+      'sandwich',
+      'acompañamientos',
+      'adicionales',
+      'listaProductos',
     ]),
     // total() {
     //   return this.lista.reduce((a, b) => a + b.Precio, 0);

@@ -37,9 +37,13 @@
 
           <div>
             <ul v-for="(elemento, index) in elementos" :key="index.id"  class="list-group">
-              <li class="list-group-item" v-on:click="tomarPedido"
+              <li class="list-group-item" v-on:click="tomarPedido(elemento)"
               >{{ elemento.Nombre }} - S/.{{elemento.Precio}}</li>
             </ul>
+
+            <tr>
+              <td>vxovjdfojbofd</td>
+            </tr>
           </div>
 
     </div>

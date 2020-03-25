@@ -1,6 +1,5 @@
 <template>
   <div>
-    <img alt="Vue logo" src="../assets/logoh.png" class="img-fluid">
     <div class="container mt-5">
       <div class="row">
         <div class="col">

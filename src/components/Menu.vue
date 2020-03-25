@@ -1,7 +1,8 @@
 <template>
     <div class="container mt-5">
           <nav class="navbar navbar-light bg-light">
-            <form id="dynamic-component-demo" class="form-inline">
+            <form id="dynamic-component-demo" class="form-inline d-flex
+            justify-content-sm-center align-items-sm-center btn-group" role="toolbar">
                 <button
                 v-on:click="elementos = llenarProductos('Categoria', 'hb')"
                 class="btn btn-outline-success"
@@ -35,16 +36,14 @@
             </form>
           </nav>
 
-          <div>
-            <ul v-for="(elemento, index) in elementos" :key="index.id"  class="list-group">
-              <li class="list-group-item" v-on:click="tomarPedido(elemento)"
-              >{{ elemento.Nombre }} - S/.{{elemento.Precio}}</li>
-            </ul>
-
-            <tr>
-              <td></td>
-            </tr>
-          </div>
+              <ul v-for="(elemento, index) in elementos" :key="index.id"
+              class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                v-on:click="tomarPedido(elemento)">
+                  {{ elemento.Nombre }}
+                  <span class="badge badge-success badge-pill">S/.{{ elemento.Precio }}.00</span>
+                </li>
+              </ul>
 
     </div>
 </template>
@@ -52,7 +51,7 @@
 <script>
 
 import {
-  mapGetters, mapActions,
+  mapGetters, mapActions, mapMutations,
 } from 'vuex';
 
 export default {
@@ -70,6 +69,9 @@ export default {
   methods: {
     ...mapActions([
       'tomarPedido',
+    ]),
+    ...mapMutations([
+      'aumentarProducto',
     ]),
   },
   components: {

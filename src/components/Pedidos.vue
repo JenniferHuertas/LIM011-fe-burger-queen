@@ -5,18 +5,27 @@
       <div class="alert alert-warning" role="alert">
         <div class="d-flex justify-content-between align-items-center">
           <div>
-                {{ elemento.Nombre }} - S/.{{elemento.Precio}} - {{elemento.cantidad}}
+                {{ elemento.Nombre }}
           </div>
 
           <div>
+             <span class="badge badge-danger badge-pill">{{ elemento.cantidad }}</span>
+             <span class="badge badge-success badge-pill">S/.{{ elemento.Precio }}.00</span>
              <button @click="disminuirProducto(index)" class="btn btn-warning btn-sm">-</button>
              <button @click="aumentarProducto(index)" class="btn btn-success btn-sm">+</button>
-             <button @click="eliminar(index)" type="button" class="btn btn-danger btn-sm">x</button>
+             <button @click="eliminar(index)" type="button" class="btn btn-danger btn-sm">
+               <i class="fas fa-trash-alt"></i>
+             </button>
           </div>
         </div>
       </div>
     </div>
-    <h4>TOTAL: {{ total }}</h4>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>TOTAL: {{ total }}.00</h4>
+      <button class="btn btn-primary">Enviar Pedido</button>
+    </div>
+
 
   </div>
 </template>
@@ -35,9 +44,6 @@ export default {
     };
   },
   methods: {
-    // eliminar(index) {
-    //   this.lista.splice(index, 1);
-    // },
     ...mapMutations([
       'eliminar',
       'aumentarProducto',
@@ -54,9 +60,6 @@ export default {
     ...mapState([
       'listaProductos',
     ]),
-    // total() {
-    //   return this.lista.reduce((a, b) => a + b.Precio, 0);
-    // },
   },
 };
 

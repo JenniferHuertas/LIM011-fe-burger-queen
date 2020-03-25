@@ -27,6 +27,7 @@ export default new Vuex.Store({
               Nombre: elemento.Nombre,
               Precio: elemento.Precio,
               cantidad: elemento.cantidad,
+              estado: elemento.estado,
             });
           }
         });
@@ -69,6 +70,7 @@ export default new Vuex.Store({
         Nombre: el.Nombre,
         Precio: el.Precio,
         cantidad: el.cantidad,
+        estado: el.estado,
       };
       const payload = { miArgumento: pedido };
       context.commit('showElements', payload);

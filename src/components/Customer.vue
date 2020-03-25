@@ -2,7 +2,7 @@
     <div class="container mt-5">
           <h5>{{ titulo }}</h5>
           <input type="text" class="form-control my-3" v-model="nuevoCliente"
-          v-on:keyup.enter="agregarCliente">
+          v-on:keyup.enter="agregarCliente" placeholder="Nombre">
           <button class="btn btn-primary" @click="agregarCliente">Agregar</button>
           <p>{{ clientes[0] ? clientes[0].cliente:'' }}</p>
     </div>

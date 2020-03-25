@@ -1,13 +1,22 @@
 <template>
   <div>
 
-    <div>
-        <ul v-for="(elemento, index) in $store.state.listaProductos"
-        :key="index.id"  class="list-group">
-              <li class="list-group-item">{{ elemento.Nombre }} - S/.{{elemento.Precio}}</li>
-            </ul>
-        <span>{{  }}</span>
+    <div class="mt-3" v-for="(elemento, index) in listaProductos" :key="index.id">
+      <div class="alert alert-warning" role="alert">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+                {{ elemento.Nombre }} - S/.{{elemento.Precio}} - {{elemento.cantidad}}
+          </div>
+
+          <div>
+             <button @click="disminuirProducto(index)" class="btn btn-warning btn-sm">-</button>
+             <button @click="aumentarProducto(index)" class="btn btn-success btn-sm">+</button>
+             <button @click="eliminar(index)" type="button" class="btn btn-danger btn-sm">x</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <h4>TOTAL: {{ total }}</h4>
 
   </div>
 </template>
@@ -30,23 +39,19 @@ export default {
     //   this.lista.splice(index, 1);
     // },
     ...mapMutations([
-      'showElements',
+      'eliminar',
+      'aumentarProducto',
+      'disminuirProducto',
     ]),
     ...mapActions([
-      'tomarPedido',
+      '',
     ]),
   },
   computed: {
     ...mapGetters([
-      'llenarProductos',
+      'total',
     ]),
     ...mapState([
-      'bebidasFrias',
-      'bebidasCalientes',
-      'hamburguesas',
-      'sandwich',
-      'acompañamientos',
-      'adicionales',
       'listaProductos',
     ]),
     // total() {

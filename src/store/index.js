@@ -26,11 +26,16 @@ export default new Vuex.Store({
             newPedido.push({
               Nombre: elemento.Nombre,
               Precio: elemento.Precio,
+              cantidad: elemento.cantidad,
             });
           }
         });
       });
       return newPedido;
+    },
+
+    total({ listaProductos }) {
+      return listaProductos.reduce((a, b) => a + b.Precio * b.cantidad, 0);
     },
   },
   mutations: {
@@ -38,6 +43,18 @@ export default new Vuex.Store({
     showElements({ listaProductos }, { miArgumento }) {
       console.log(listaProductos, miArgumento);
       listaProductos.push(miArgumento);
+    },
+
+    eliminar(state, index) {
+      state.listaProductos.splice(index, 1);
+    },
+
+    aumentarProducto(state, index) {
+      state.listaProductos[index].cantidad += 1;
+    },
+
+    disminuirProducto(state, index) {
+      state.listaProductos[index].cantidad -= 1;
     },
   },
   actions: {
@@ -51,6 +68,7 @@ export default new Vuex.Store({
       const pedido = {
         Nombre: el.Nombre,
         Precio: el.Precio,
+        cantidad: el.cantidad,
       };
       const payload = { miArgumento: pedido };
       context.commit('showElements', payload);

@@ -23,7 +23,7 @@
 
     <div class="d-flex justify-content-between align-items-center">
       <h4>TOTAL: {{ total }}.00</h4>
-      <button class="btn btn-primary">Enviar Pedido</button>
+      <button @click="guardarOrden" class="btn btn-primary">Enviar Pedido</button>
     </div>
 
 
@@ -50,7 +50,7 @@ export default {
       'disminuirProducto',
     ]),
     ...mapActions([
-      '',
+      'guardarOrden',
     ]),
   },
   computed: {

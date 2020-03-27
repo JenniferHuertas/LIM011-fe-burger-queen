@@ -15,6 +15,7 @@ export default new Vuex.Store({
     acompañamientos: [],
     adicionales: [],
     listaProductos: [],
+    nuevoPedido: [],
   },
   getters: {
     llenarProductos: (state) => (propiedad, value) => {
@@ -57,6 +58,9 @@ export default new Vuex.Store({
     disminuirProducto(state, index) {
       state.listaProductos[index].cantidad -= 1;
     },
+    nuevoEstado(state, payload) {
+      state[payload.state] = payload.value;
+    },
   },
   actions: {
     bindBebidasFrias: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('bebidasFrias', db.collection('Bebidas Frias'))),
@@ -75,5 +79,17 @@ export default new Vuex.Store({
       const payload = { miArgumento: pedido };
       context.commit('showElements', payload);
     },
+    guardarOrden(context) {
+      db.collection('nuevoPedido').add({
+        orden: context.state.listaProductos,
+      })
+        .then((docRef) => {
+          console.log('Document written with ID: ', docRef.id);
+        })
+        .catch((error) => {
+          console.log('Error adding document: ', error);
+        });
+    },
+
   },
 });

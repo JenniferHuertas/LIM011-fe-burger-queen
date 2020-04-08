@@ -43,7 +43,13 @@ export default {
 
     };
   },
+  props: {
+    name: String,
+  },
   methods: {
+    miEvento() {
+      this.$emit();
+    },
     ...mapMutations([
       'eliminar',
       'aumentarProducto',
@@ -66,3 +72,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+button {
+  background-color :red
+}
+</style>

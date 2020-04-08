@@ -1,11 +1,11 @@
 <template>
   <div id="app" class="text-center">
     <div id="nav" class="container mt-5">
-      <nav class="col-sm-12 navbar fixed-top navbar-light" style="background-color: #fef9e7;">
+      <nav class="col-sm-12 navbar">
           <img alt="Responsive image" src="./assets/logoh.png" class="rounded float-left">
           <div class="text-center">
             <router-link to="/home">Home</router-link> |
-            <router-link to="/about">About</router-link>
+            <router-link to="/cocina">Cocina</router-link>
           </div>
       </nav>
     </div>

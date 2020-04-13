@@ -15,7 +15,7 @@ export default new Vuex.Store({
     acompañamientos: [],
     adicionales: [],
     listaProductos: [],
-    nuevoPedido: [],
+    nuevaOrden: [],
   },
   getters: {
     llenarProductos: (state) => (propiedad, value) => {
@@ -69,6 +69,8 @@ export default new Vuex.Store({
     bindSandwich: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('sandwich', db.collection('Sandwich'))),
     bindAcompañamientos: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('acompañamientos', db.collection('Acompañamientos'))),
     bindAdicionales: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('adicionales', db.collection('Adicionales'))),
+    bindnuevoPedido: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('nuevaOrden', db.collection('nuevoPedido'))),
+
     tomarPedido(context, el) {
       const pedido = {
         Nombre: el.Nombre,

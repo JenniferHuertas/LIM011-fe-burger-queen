@@ -1,23 +1,34 @@
 <template>
   <div class="about">
-
-    <button @click="elementos = mostrarEnCocina">Pedidos</button>
-
-    <div class="mt-3" v-for="(elemento, index) in elementos" :key="index.id">
-      <div class="alert alert-warning" role="alert">
-        <div class="d-flex justify-content-between align-items-center">
-          <div>
-                {{ elemento.Nombre }}
-          </div>
-
-          <div>
-             <span class="badge badge-danger badge-pill">{{ elemento.cantidad }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <h1>helloooooooooooo</h1>
+    <!-- <table class="table table-hover table-bordered table-sm">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-danger">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr class="table-danger">
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr class="table-danger">
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> -->
 
 
   </div>
@@ -43,7 +54,6 @@ export default {
     ]),
     ...mapActions([
       'guardarOrden',
-      'mostrarEnCocina',
     ]),
   },
   computed: {
@@ -51,8 +61,11 @@ export default {
       'total',
     ]),
     ...mapState([
-      'listaProductos',
+      'nuevaOrden',
     ]),
+  },
+  created() {
+    this.$store.dispatch('bindnuevoPedido');
   },
 };
 </script>

@@ -1,8 +1,11 @@
 {
+  "homepage": "http://JenniferHuertas.github.io/lim011-fe-burger-queen",
   "name": "lim011-fe-burger-queen",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
@@ -30,6 +33,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-vue": "^6.1.2",
+    "gh-pages": "^2.2.0",
     "mock-cloud-firestore": "^0.11.0",
     "vue-template-compiler": "^2.6.11"
   },

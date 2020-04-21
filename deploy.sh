@@ -16,10 +16,10 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+# if you are deploying to https://JenniferHuertas.github.io
+# git push -f git@github.com:JenniferHuertas/JenniferHuertas.github.io.git master
 
-# if you are deploying to https://JenniferHuertas.github.io/RedSocial2.0
+# if you are deploying to https://JenniferHuertas.github.io/LIM011-fe-burger-queen
 # git push -f git@github.com:JenniferHuertas/LIM011-fe-burger-queen.git master:gh-pages
 
 cd -

@@ -1,4 +1,4 @@
-# redsosial
+# BurgerQueen
 
 ## Project setup
 ```

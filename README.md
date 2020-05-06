@@ -103,19 +103,19 @@ pendientes de tu proyecto anterior.
 
 ### HTML y CSS
 
-- [ x ] HTML semántico
-- [ x ] CSS flexbox
+- [x] HTML semántico
+- [x] CSS flexbox
 - [ ] Sass
-- [ x ] Maquetación
+- [x] Maquetación
 
 ### Frontend Development
 
-- [ x ] Componentes
-- [ x ] Manejo del estado
+- [x] Componentes
+- [x] Manejo del estado
 
 ### PWA
 
-- [ x ] Concepto
+- [x] Concepto
 - [ ] Utilidad
 - [ ] Que es [Workbox](https://developers.google.com/web/tools/workbox)
 - [ ] Qué es un `serviceWorker`
@@ -149,22 +149,22 @@ pendientes de tu proyecto anterior.
 
 ### Vue
 
-- [ x ] [Instancia de Vue.js](https://es.vuejs.org/v2/guide/instance.html)
-- [ x ] [Datos y métodos](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
-- [ x ] [Uso y creación de Componentes](https://vuejs.org/v2/guide/components.html)
-- [ x ] [Props](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
-- [ x ] Directivas ([v-bind](https://es.vuejs.org/v2/api/#v-bind) | [v-model](https://es.vuejs.org/v2/guide/forms.html))
-- [ x ] Renderizado condicional ([v-if](https://es.vuejs.org/v2/guide/conditional.html#v-if) | [v-else](https://es.vuejs.org/v2/guide/conditional.html#v-else))
-- [ x ] Iteraciones ([v-for](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for))
-- [ x ] Eventos ([v-on](https://es.vuejs.org/v2/guide/events.html))
-- [ x ] [Propiedades Computadas y Observadores](https://es.vuejs.org/v2/guide/computed.html)
-- [ x ] [Router](https://router.vuejs.org/guide/#html)
-- [ x ] [Clases y Estilos](https://es.vuejs.org/v2/guide/class-and-style.html)
+- [x] [Instancia de Vue.js](https://es.vuejs.org/v2/guide/instance.html)
+- [x] [Datos y métodos](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
+- [x] [Uso y creación de Componentes](https://vuejs.org/v2/guide/components.html)
+- [x] [Props](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
+- [x] Directivas ([v-bind](https://es.vuejs.org/v2/api/#v-bind) | [v-model](https://es.vuejs.org/v2/guide/forms.html))
+- [x] Renderizado condicional ([v-if](https://es.vuejs.org/v2/guide/conditional.html#v-if) | [v-else](https://es.vuejs.org/v2/guide/conditional.html#v-else))
+- [x] Iteraciones ([v-for](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for))
+- [x] Eventos ([v-on](https://es.vuejs.org/v2/guide/events.html))
+- [x] [Propiedades Computadas y Observadores](https://es.vuejs.org/v2/guide/computed.html)
+- [x] [Router](https://router.vuejs.org/guide/#html)
+- [x] [Clases y Estilos](https://es.vuejs.org/v2/guide/class-and-style.html)
 
 
 ### Firebase
 
-- [ x ] Firestore
+- [x] Firestore
 - [ ] Firebase security rules
 - [ ] Observables
 
@@ -172,12 +172,12 @@ pendientes de tu proyecto anterior.
 - [ ] Testeo de tus interfaces
 - [ ] Testeo de componentes
 - [ ] Testeo asíncrono
-- [ x ] Mocking
+- [x] Mocking
 
 ### Colaboración en Github
 
-- [ x ] Branches
-- [ x ] Pull Requests
+- [x] Branches
+- [x] Pull Requests
 - [ ] Tags
 
 ### Organización en Github
@@ -189,9 +189,9 @@ pendientes de tu proyecto anterior.
 
 ### Buenas prácticas de desarrollo
 
-- [ x ] Modularización
-- [ x ] Nomenclatura / Semántica
-- [ x ] Linting
+- [x] Modularización
+- [x] Nomenclatura / Semántica
+- [x] Linting
 
 ***
 
